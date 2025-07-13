@@ -1,0 +1,6 @@
+[submodule "modules/Ark-Forge"]
+	path = modules/Ark-Forge
+	url = https://github.com/koobie777/Ark-Forge.git
+[submodule "modules/ARK-Orbital-Command"]
+	path = modules/ARK-Orbital-Command
+	url = https://github.com/koobie777/ARK-Orbital-Command.git
