@@ -1,0 +1,25 @@
+<!-- THE ARK ECOSYSTEM ICON v3 - Flat, High Contrast, Cosmic Shield -->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer cosmic ring -->
+  <circle cx="64" cy="64" r="62" fill="#252440" stroke="#00FFD1" stroke-width="4"/>
+  <!-- Inner shield (gradient for cosmic feel) -->
+  <radialGradient id="shieldGrad" cx="64" cy="72" r="54" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#85E1FF"/>
+    <stop offset="100%" stop-color="#23233C"/>
+  </radialGradient>
+  <ellipse cx="64" cy="72" rx="44" ry="54" fill="url(#shieldGrad)" stroke="#00FFD1" stroke-width="2"/>
+  <!-- Central ARK fleet glyph (triangle/star) -->
+  <polygon points="64,38 92,90 64,73 36,90" fill="#00FFD1" stroke="#85E1FF" stroke-width="2"/>
+  <!-- Inner core glow (no blur, just color) -->
+  <circle cx="64" cy="64" r="18" fill="#85E1FF" opacity="0.3"/>
+  <!-- ARK orbit arcs (subtle accent) -->
+  <path d="M64 34 Q88 48 104 52 Q74 66 64 100 Q54 66 24 52 Q40 48 64 34 Z"
+        fill="none" stroke="#85E1FF" stroke-width="2" opacity="0.7"/>
+  <!-- Fleet stars -->
+  <circle cx="44" cy="44" r="3" fill="#85E1FF"/>
+  <circle cx="84" cy="44" r="2" fill="#00FFD1"/>
+  <circle cx="54" cy="96" r="2" fill="#85E1FF"/>
+  <circle cx="74" cy="96" r="3" fill="#00FFD1"/>
+  <!-- ARK text (bold, cosmic font) -->
+  <text x="64" y="120" text-anchor="middle" font-family="Orbitron, Arial, sans-serif" font-size="18" fill="#00FFD1" font-weight="bold" letter-spacing="2px">THE ARK</text>
+</svg>
