@@ -1,6 +1,6 @@
 [submodule "ark-ecosystem-essential/ark-themeing"]
 	path = ark-ecosystem-essential/ark-themeing
-	url = git@github.com:koobie777/ark-themeing.git
+	url = git@github.com:koobie777/ARK-Themeing.git
 
 [submodule "ark-ecosystem-orbital-dock/ARK-Forge"]
 	path = ark-ecosystem-orbital-dock/ARK-Forge
