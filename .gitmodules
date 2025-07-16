@@ -9,3 +9,6 @@
 [submodule "ark-ecosystem-orbital-dock/ARK-Orbital-Command"]
 	path = ark-ecosystem-orbital-dock/ARK-Orbital-Command
 	url = git@github.com:koobie777/ARK-Orbital-Command.git
+[submodule "ark-ecosystem-orbital-dock/Ark-Forge"]
+	path = ark-ecosystem-orbital-dock/Ark-Forge
+	url = git@github.com:koobie777/Ark-Forge.git
