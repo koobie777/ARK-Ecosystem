@@ -1,122 +1,172 @@
-# 🌌 THE ARK ECOSYSTEM
-**A.R.K. – Advanced Rebuilder’s Kit**
+# 🏛️ ARK-Ecosystem – Meta-Repository & Fleet Protocol
 
-> “May The ARK guide your builds through any cosmic storm.”
-
-Welcome, Commander, to The ARK: a modular, tmux-powered digital fleet for ROM building, device management, diagnostics, automation, and missions yet to be imagined.  
-The ARK is for everyone—Commanders, Builders, Maintainers, Operators, and the open-source fleet.  
-**May The ARK (Advanced Rebuilder’s Kit) be with you!**
+**Version: v2.0.0 (Fleet Renaissance+)**  
+**The ARK – Modular Android Build & Admin Fleet**  
+**Commander: koobie777**
 
 ---
 
-## 🛰️ ARK Fleet Modules & Acronyms
-
-| Module                  | ARK Acronym            | Full Name                                                                 |
-|-------------------------|------------------------|--------------------------------------------------------------------------|
-| **ARK Forge**           | F.O.R.G.E.             | Fleet Operations ROM Generation Engine                                    |
-| **ARK Orbital Command** | O.R.B.I.T.A.L.         | Omnidirectional Resource Base Integration & Telemetry Assistant Liaison   |
-| **ARK Admiral**         | A.D.M.I.R.A.L.         | Automated Deployment & Management Integration Release Assistant Launchpad |
-| **ARK Fleet Manager**   | F.L.E.E.T.             | Fleet Logistics Engine Ensemble Terminal                                  |
-| **ARK Core**            | C.O.R.E.               | Centralized Operations & Resource Engine                                  |
-| **ARK Docs**            | D.O.C.S.               | Documentation & Operational Compendium Suite                              |
-| _Planned:_              | S.E.N.T.I.N.E.L.       | Security & Event Network Telemetry Integration Node & Enhanced Logging    |
-| _Planned:_              | A.S.T.R.A.             | Automated System for Testing, Recovery, and Analysis                      |
-| _Planned:_              | S.H.I.E.L.D.           | Secure Hardware Integration & Endpoint Lockdown Director                  |
-| _Planned:_              | P.O.R.T.A.L.           | Persistent Operations Remote Terminal & Access Layer                      |
+> **ADMIRAL'S LOG:**  
+> ARK-Ecosystem is the meta-repo at the heart of The ARK. All modules, tools, and protocols are managed as git submodules for seamless fleet-wide deployment, upgrade, synchronization, and instant modular evolution.  
+> **Modules, submodules, and system-bay scripts can be promoted or demoted at will—The ARK adapts.**
 
 ---
 
-## 🛸 The ARK Vision
+## ✨ Ecosystem Features
 
-- **Persistent:** All operations run in a single tmux session. Never lose progress.
-- **Modular:** Drop-in modules for any mission—ROMs, diagnostics, automation, security, and beyond.
-- **Collaborative & Themed:** Built for all Commanders, open to every contributor. All features and UI should remain in ARK theming and spirit.
-- **Inspirational:** Universal ARK quotes inspire and guide at every step.
-- **Legendary:** Designed to set the standard for open-source build and fleet automation.
+- **Meta-Repository Protocol:**  
+  - Modular system: All ARK modules are standalone Git repositories, included as submodules for unified fleet control.
+  - **Promotion & Demotion Pipeline:**  
+    - Drag-and-drop protocol: Easily add, promote, or demote scripts or modules by moving them between directories.
+    - **System-Bay Inheritance:**  
+      - Any script dropped into a `system-bay/` directory inherits its parent directory name as its identity.
+      - System-bay submodules can be promoted to full modules in `ark-ecosystem-orbital-dock/` (experimental) or `ark-ecosystem-essentials/` (stable/flagship).
+      - Promoted modules may be demoted back to system-bay or a submodule as needed.
+    - **Embedded/Baked-In Features:**  
+      - Functions, code blocks, or scripts can be baked into main modules (e.g., panels inside `ark-menu.sh`).
+      - These features can be extracted and promoted or returned to embedded status.
+    - **Sibling Scripts:**  
+      - Standalone scripts next to main module scripts (e.g., `ark-system-info.sh` and `ark-system-info-time.sh`)
+      - Sibling scripts can be promoted/demoted as modules or submodules.
+  - **Instant Expansion:**  
+    - Drag-and-drop any `.sh` script into any module, system-bay, or dock directory for instant detection and execution inclusion.
+    - The ARK menu and loader protocols auto-detect these changes.
+  - **Flexible Structure:**  
+    - No restriction on submodule location—modules, system-bay features, and baked-in code are all part of the promotion pipeline.
+    - Easily reorganize your fleet by moving scripts between directories and updating the ARK-Ecosystem repo.
+- **Fleet Synchronization:**  
+  - One pull updates all modules fleet-wide.
+  - All devices run the same tmux session, main menu, and protocol logic.
+- **Unified ARK Protocols:**  
+  - Error handling, debug reporting, and UI theming are standardized.
+  - All modules and menus return to the ARK main menu after execution.
 
 ---
 
-## 🚀 Onboarding
+## 🚀 Installation & Fleet Sync
 
-1. **Clone The ARK Ecosystem with submodules:**
-   ```bash
-   git clone --recurse-submodules <this-repo-url>
-   ```
-2. **Launch The ARK:**
-   ```bash
-   ./ark-launcher.sh
-   ```
-   - Use `--theme expert` for minimal prompts; default is Cadet Mode for full ARK guidance.
+```bash
+git clone --recurse-submodules https://github.com/koobie777/ARK-Ecosystem.git
+cd ARK-Ecosystem
+git submodule update --init --recursive
+```
+
+### 🛸 Update Fleet
+
+```bash
+git pull
+git submodule update --remote --merge
+```
 
 ---
 
-## 🛰️ Key Protocols
+## 🛠️ Module Management & Promotion/Demotion Protocol
 
-- **Single tmux Session:** All modules operate within the same session—never exit, always return to the ARK Main Menu.
-- **Theming:**  
-    - **Cadet Mode:** Guided, ARK-themed onboarding for new users  
-    - **Expert Mode:** Minimal prompts, rapid execution for advanced users  
-    - Seamless mode toggle (`--theme cadet|expert`)
-- **Unified Quote System:**  
-    - Random ARK quotes will appear at launch, on menus, and after key actions across all modules.
-    - Contribute your own quotes in `modules/common/quotes.txt`!
-- **Unified Error Handling:**  
+### Promote a Script or Submodule
+
+1. **From System-Bay to Experimental Module:**  
+   - Drag-and-drop the script from `system-bay/` to `ark-ecosystem-orbital-dock/<ModuleName>/`
+   - Update `.gitmodules` if the module is a standalone repo.
+   - Commit changes.
+
+2. **From Experimental to Essential:**  
+   - Move the module to `ark-ecosystem-essentials/<ModuleName>/`
+   - Commit, update submodule pointer.
+
+3. **Baked-In/Embedded to Standalone:**  
+   - Extract functions/code from main module (e.g., from `ark-menu.sh`) and save as a script in dock or essentials.
+
+### Demote a Module to a Submodule/System-Bay
+
+- Move the module or script from dock/essentials to a system-bay directory or as a sibling script.
+- Update menu entries and documentation for its new status.
+- Commit changes.
+
+### Drag-and-Drop Protocol
+
+- **Add/Promote:** Drop any `.sh` script in dock, essentials, or system-bay for instant inclusion.
+- **Demote:** Move module script back to system-bay or as a submodule to any parent module.
+- The ARK auto-detects changes at runtime; no restart required.
+
+---
+
+## 🗂️ Directory Structure
+
+```
+ARK-Ecosystem/
+├── README.md
+├── docs/
+│   ├── changelog.md
+│   ├── module-creation.md
+│   ├── module-uninstall.md
+│   ├── ark-ecosystem-guide.md
+│   ├── ark-ecosystem-project-scope.md
+│   └── [other protocol docs]
+├── ark-ecosystem-orbital-dock/
+│   ├── ARK-Orbital-Command/
+│   │   └── ark-menu/
+│   │        └── ark-menu-systems-bay/
+│   ├── ARK-Forge/
+│   ├── [other experimental modules...]
+├── ark-ecosystem-essentials/
+│   ├── ark-themeing/
+│   ├── [promoted essential modules...]
+├── assets/
+│   └── icons/
+├── logs/
+├── reports/
+├── ark-ecosystem.sh
+├── ark-ecosystem-setup.sh
+└── .gitmodules
+```
+
+---
+
+## 🛰️ ARK Protocols
+
+- All scripts run in a single tmux session.
+- ARK theming: cosmic menus, docs, and scripts.
+- Error handling:
     ```
     ⚠️ [ERROR TYPE]
     Location: [component]
     Fix: [solution]
     "I'll guide you, Commander."
     ```
-    - Errors never exit ARK session—always return to Main Menu, always guide the user.
-- **Flexibility:** Override default directories, bring any device or build to the fleet.
-- **Expansion:** Future modules are pre-defined and ready for contribution.
-- **Contribution Theming:** All features and changes must maintain ARK theming and spirit.
+- Debug/status reports before returning.
+- **Promotion/demotion pipeline:**  
+    - System-bay submodule → Experimental module → Essential module → Core protocol, or vice versa.
+    - Embedded/baked-in features, sibling scripts, and standalone modules can all move freely within this structure.
+- Modes: Cadet, Expert, Voyager, Admiral, Sentinel, Instructor, and custom.
 
 ---
 
-## 🛠️ Current Modules
+## 🌌 Roadmap & Expansion
 
-- **ARK Forge (F.O.R.G.E.):** Persistent, modular ROM build orchestrator (Smart Build, Recovery Build, ROM Build, Sync Only, Resume Build)
-- **ARK Orbital Command (O.R.B.I.T.A.L.):** Diagnostics, fleet provisioning, telemetry, drivers, and recovery
-- **Universal ARK Quotes:** Inspiration at every step
-- **More launching soon—see [Project Scope](docs/PROJECT_SCOPE.md)**
-
----
-
-## 🗺️ Roadmap & Expansion
-
-- **Resume Build:** Resume interrupted builds at any stage
-- **Sync-Only:** Repo sync tasks, full and incremental
-- **Module Error Trapping:** Enhanced, user-friendly error handling across all modules
-- **Automation:** Batch setup, remote command, and automated device management
-- **Security:** S.E.N.T.I.N.E.L. & S.H.I.E.L.D. modules for diagnostics, hardening, and logging
-- **Remote Control:** P.O.R.T.A.L. for remote ARK access and fleet ops
-- **Testing & Recovery:** A.S.T.R.A. for automated recovery and validation
-- **Cross-platform & Containerization:** Docker, WSL, Mac, Linux support
-- **Fleet Dashboard:** Web and CLI dashboards, device status, real-time logs
+- System-bay features as first-class citizens—rapid fleet evolution.
+- Drag-and-drop modularity for instant updates, promotions, and demotions.
+- Fleet-wide auto-detection for new features.
+- See [docs/ark-ecosystem-project-scope.md](docs/ark-ecosystem-project-scope.md) for roadmap.
 
 ---
 
 ## 🤝 Contributing
 
-- **The ARK is for everyone.** Fork, add modules, suggest enhancements, or bring your own device ecosystems.
-- See [MODULE_TEMPLATE.md](docs/MODULE_TEMPLATE.md) for new module standards.
-- Review [Project Scope](docs/PROJECT_SCOPE.md) for current needs and ideas.
-- **Theming Protocol:**  
-  - All feature requests and changes must maintain ARK theming and spirit.
-  - Use ARK terminology, acronyms, and metaphors in all menus, modules, and documentation.
-  - “Would this feel at home on The ARK Supreme Mk1?” If not, iterate!
-  - Add your own ARK quotes for future Commanders!
+- Fork, branch, PR—see [docs/module-creation.md](docs/module-creation.md)
+- Promote/demote scripts or modules using drag-and-drop protocol.
+- All contributions must maintain ARK theming and metaphors.
 
 ---
 
-## 📡 Contact & Collaboration
+## 📡 Support & Contact
 
-- **Commander:** koobie777
-- **Flagship:** The ARK Supreme Mk1
-- **Mission:** Build, manage, and automate your digital fleet—together, for the future.
+- [GitHub Issues](https://github.com/koobie777/ARK-Ecosystem/issues)
+- ARK Discord & Fleet Channels
+- Commander: koobie777
+
+---
 
 > “If you can dream it, you can build it—on The ARK.”
 
 **The ARK is your fleet. Shape its future.**  
-**May The ARK (Advanced Rebuilder’s Kit) be with you!**
+**May The ARK (Adaptive Resource Kontinuum) be with you, Commander!**
